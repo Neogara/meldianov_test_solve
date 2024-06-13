@@ -1,0 +1,1 @@
+docker run -p 8000:8000 meldianov_test_service 
