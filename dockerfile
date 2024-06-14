@@ -1,10 +1,11 @@
-FROM pyton:3.9
-WORKDIR ./src
+FROM python:3
+WORKDIR ./meltianov_test_service
 
 COPY ./src ./
 COPY ./requirements.txt ./
 COPY ./.env ./
+# --no-cache-dir
+RUN python -m pip install  -r requirements.txt
 
-RUN pip install -r requirements.txt
-
-CMD ["python", "-m","fastapi", " dev", "service_app.py"]
+CMD ["fastapi", "dev", "service_app.py"]
+# CMD ["python","./service_app.py"]

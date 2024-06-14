@@ -1,1 +1,1 @@
-docker run -p 8000:8000 meldianov_test_service 
+docker run -p 8000:8000 meldianov_test_service uvicorn service_app:app --host 0.0.0.0 --port 8000

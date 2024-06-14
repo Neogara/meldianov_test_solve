@@ -4,7 +4,7 @@ base_api_url = "http://127.0.0.1:8000/api"
 
 if __name__ == '__main__':
     from_currency = "USD"
-    to_currency = "RUS"
+    to_currency = "RUB"
     amount = 100
 
     api_path = f"{base_api_url}/rates"
