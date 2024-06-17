@@ -5,7 +5,8 @@
 
 build.bat - сборка проекта
     автоматическая сборка requirements.txt 
-    сборка docker контейнера 
+    сборка docker контейнера
+        redis, postgres, service_app
 
 docker_run.bat - запуск собранного контейнера
 

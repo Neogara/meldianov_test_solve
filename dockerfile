@@ -7,5 +7,4 @@ COPY ./.env ./
 # --no-cache-dir
 RUN python -m pip install  -r requirements.txt
 
-CMD ["fastapi", "dev", "service_app.py"]
-# CMD ["python","./service_app.py"]
+CMD ["uvicorn", "service_app:app", "--host", "0.0.0.0", "--port", "8000"]

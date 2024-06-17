@@ -35,14 +35,6 @@ def get_available_currencies():
 
 
 def convert_currency_rates(from_currency, to_currency, amount):
-    if from_currency == to_currency:
-        return {
-            "result": amount
-        }
-
-    if amount <= 0:
-        return 0
-
     api_path = f"{base_url}/latest"
     api_headers = {}
     api_params = {
@@ -59,7 +51,7 @@ def convert_currency_rates(from_currency, to_currency, amount):
     response_data = response.json()
     raw_rates = response_data["data"]
 
-    rate = raw_rates[to_currency] * amount
+    rate = raw_rates[to_currency]
     return rate
 
 # if __name__ == '__main__':
